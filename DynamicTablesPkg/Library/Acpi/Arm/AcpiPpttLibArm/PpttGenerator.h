@@ -118,7 +118,7 @@ GetSizeof##PpttObjName (                                                      \
     (*NodeIndexer)->CycleDetectionStamp = 0;                                  \
     (*NodeIndexer)->TopologyParent = NULL;                                    \
     DEBUG ((                                                                  \
-      DEBUG_INFO,                                                             \
+      DEBUG_VERBOSE,                                                          \
       "PPTT: Node Indexer = %p, Token = %p, Object = %p, Offset = 0x%x\n",    \
       *NodeIndexer,                                                           \
       (*NodeIndexer)->Token,                                                  \

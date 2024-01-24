@@ -148,14 +148,14 @@ GetPpttNodeReferencedByToken (
   ASSERT (NodeIndexer != NULL);
 
   DEBUG ((
-    DEBUG_INFO,
+    DEBUG_VERBOSE,
     "PPTT: Node Indexer: SearchToken = %p\n",
     SearchToken
     ));
 
   while (NodeCount-- != 0) {
     DEBUG ((
-      DEBUG_INFO,
+      DEBUG_VERBOSE,
       "PPTT: Node Indexer: NodeIndexer->Token = %p. Offset = %d\n",
       NodeIndexer->Token,
       NodeIndexer->Offset
@@ -165,7 +165,7 @@ GetPpttNodeReferencedByToken (
       *IndexedNodeFound = NodeIndexer;
       Status            = EFI_SUCCESS;
       DEBUG ((
-        DEBUG_INFO,
+        DEBUG_VERBOSE,
         "PPTT: Node Indexer: Token = %p. Found, Status = %r\n",
         SearchToken,
         Status
@@ -214,7 +214,7 @@ DetectCyclesInTopology (
 
   while (NodesRemaining != 0) {
     DEBUG ((
-      DEBUG_INFO,
+      DEBUG_VERBOSE,
       "INFO: PPTT: Cycle detection for element with index %d\n",
       Generator->ProcTopologyStructCount - NodesRemaining
       ));
@@ -224,7 +224,7 @@ DetectCyclesInTopology (
     // Walk the topology tree
     while (CycleDetector->TopologyParent != NULL) {
       DEBUG ((
-        DEBUG_INFO,
+        DEBUG_VERBOSE,
         "INFO: PPTT: %p -> %p\n",
         CycleDetector->Token,
         CycleDetector->TopologyParent->Token

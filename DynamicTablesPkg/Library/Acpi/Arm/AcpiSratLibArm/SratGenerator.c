@@ -152,7 +152,7 @@ AddGICCAffinity (
                                                      GicCAffOffset);
 
   while (GicCCount-- != 0) {
-    DEBUG ((DEBUG_INFO, "SRAT: GicCAff = 0x%p\n", GicCAff));
+    DEBUG ((DEBUG_VERBOSE, "SRAT: GicCAff = 0x%p\n", GicCAff));
 
     GicCAff->Type             = EFI_ACPI_6_3_GICC_AFFINITY;
     GicCAff->Length           = sizeof (EFI_ACPI_6_3_GICC_AFFINITY_STRUCTURE);
@@ -200,7 +200,7 @@ AddGICItsAffinity (
                                                           GicItsAffOffset);
 
   while (GicItsCount-- != 0) {
-    DEBUG ((DEBUG_INFO, "SRAT: GicItsAff = 0x%p\n", GicItsAff));
+    DEBUG ((DEBUG_VERBOSE, "SRAT: GicItsAff = 0x%p\n", GicItsAff));
 
     GicItsAff->Type            = EFI_ACPI_6_3_GIC_ITS_AFFINITY;
     GicItsAff->Length          = sizeof (EFI_ACPI_6_3_GIC_ITS_AFFINITY_STRUCTURE);
@@ -248,7 +248,7 @@ AddMemoryAffinity (
                                                       MemAffOffset);
 
   while (MemAffCount-- != 0) {
-    DEBUG ((DEBUG_INFO, "SRAT: MemAff = 0x%p\n", MemAff));
+    DEBUG ((DEBUG_VERBOSE, "SRAT: MemAff = 0x%p\n", MemAff));
 
     MemAff->Type            = EFI_ACPI_6_3_MEMORY_AFFINITY;
     MemAff->Length          = sizeof (EFI_ACPI_6_3_MEMORY_AFFINITY_STRUCTURE);
